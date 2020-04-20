@@ -507,4 +507,17 @@ public class LambdaTest {
     saveCcOrderList.forEach(System.out::println);
   }
 
+  /**
+   * 测试调试工具
+   */
+  @Test
+  public void test22() {
+    int[] arr = IntStream.of(2, 1, 6, 8, 10, 5, 7, 3, 4, 9)
+        .filter(x -> x > 2)
+        .map(x -> x * 2)
+        .distinct()
+        .sorted()
+        .toArray();
+  }
+
 }
